@@ -1,0 +1,144 @@
+/* Link to Font Awesome CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css');
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #6a82fb, #cbeffd, #00c6ff); /* Soft blues with a hint of pink for warmth */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.App__header {
+  background: rgba(255, 255, 255, 0.85); /* Slightly opaque white */
+  color: #222;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  backdrop-filter: blur(12px); /* Stronger glassmorphism effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Elevation effect */
+}
+
+.App__heading {
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0;
+  color: #005f8a; /* Deep blue for a more professional and calm tone */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.App__main {
+  padding: 25px;
+  transform: translateY(-10px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App__text {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.App__selected-date {
+  font-weight: 800;
+  margin: 10px 0;
+  color: #d269ff; /* Fun pink hue */
+  font-size: 1.5em;
+  letter-spacing: 1px; /* Slight spacing for elegance */
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #df80f9; /* Brighter pink on hover */
+  }
+}
+
+.react-calendar {
+  margin: 20px auto;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.9); /* Light and airy background */
+  backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.react-calendar__tile {
+  color: #444;
+  font-family: "Poppins", sans-serif; /* Trendy font */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.react-calendar__tile--active {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Modern gradient */
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.react-calendar__tile--hover {
+  background-color: #ffe4f3; /* Soft hover effect */
+  color: #333;
+  transform: scale(1.1); /* Subtle hover scaling */
+}
+
+.react-calendar__tile--today {
+  background: linear-gradient(135deg, #f6d285, #fbc2eb); /* Vibrant pastel */
+  color: #222;
+  border: 2px solid #ff5e57; /* Gen Z neon highlight */
+  font-weight: bold;
+  border-radius: 50%; /* Circular styling */
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    color: #fff;
+    background: #ff5e57; /* Bold hover highlight */
+  }
+}
+
+.bpk-button {
+  background: linear-gradient(135deg, #8a2be2, #ff69b4); /* Neon blend */
+  color: white;
+  font-family: "Quicksand", sans-serif; /* Quirky font */
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 22px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #6a5acd, #142bff); /* Brighter tones */
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.App__quote {
+  font-family: "Pacifico", cursive; /* Artistic, trendy font */
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6); /* Dark glass background */
+  padding: 12px 18px;
+  border-radius: 12px;
+  max-width: 80%;
+  margin: 0 auto 25px;
+  font-style: italic;
+  animation: fadeIn 1s ease-in;
+}

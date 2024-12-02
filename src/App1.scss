@@ -1,0 +1,167 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css');
+
+:root {
+  /* Light Mode */
+  --bg-accent: url('plane.jpg'); /* Subtle texture */
+  --text-color: #0f0f10;
+  --heading-color: #d4f30a;
+  --button-bg: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+  --button-hover-bg: linear-gradient(135deg, #ff8c94, #ffafbd);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-accent: url('dark.jpg'); 
+  --text-color: #e8e8e8;
+  --heading-color: #7df9ff;
+  --button-bg: linear-gradient(135deg, #6a0dad, #ff00ff);
+  --button-hover-bg: linear-gradient(135deg, #8a2be2, #ff69b4);
+}
+
+/* Global font settings */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-image: var(--bg-accent);
+  transition: background 0.5s ease, color 0.3s ease;
+  background-attachment: fixed; /* Makes scrolling smooth */
+  background-size: cover; /* Ensures seamless scaling */
+  background-blend-mode: overlay;
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+  
+}
+
+.App {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.App__heading {
+  color: var(--heading-color);
+  font-weight: 600;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bpk-button {
+  background: var(--button-bg);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bpk-button:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.react-calendar__tile--active {
+  background: var(--calendar-active-bg);
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.react-calendar__tile--hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+}
+
+/* Calendar tile styling */
+.react-calendar {
+  margin: 20px auto;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.react-calendar__tile--today {
+  border: 2px solid var(--heading-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border-radius: 50%;
+  background: var(--calendar-active-bg);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    color: white;
+    background: var(--heading-color);
+  }
+}
+
+/* Dynamic quote styling */
+.App__quote {
+  font-family: "Pacifico", cursive;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px 20px;
+  border-radius: 12px;
+  max-width: 80%;
+  margin: 0 auto 25px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.4);
+  animation: fadeIn 1.2s ease-in;
+}
+
+/* Enhanced Buttons */
+.bpk-button {
+  background: var(--button-bg);
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bpk-button:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle Animation */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 70%);
+  animation: pulse 10s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

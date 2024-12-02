@@ -1,0 +1,56 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@skyscanner/backpack-react-scripts": "11.2.2",
+    "@skyscanner/cra-template-backpack": "0.0.9",
+    "bpk-mixins": "^42.0.1",
+    "bpk-stylesheets": "^9.0.17",
+    "react": "^18.3.1",
+    "react-calendar": "^5.1.0",
+    "react-datepicker": "^7.5.0",
+    "react-dom": "^18.3.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.80.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start-ssr": "react-scripts start-ssr",
+    "build": "react-scripts build",
+    "build-ssr": "react-scripts build-ssr",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.25.9",
+    "@skyscanner/backpack-web": "^35.6.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "bpk-component-button": "^7.1.2",
+    "bpk-component-calendar": "^13.1.2",
+    "bpk-component-code": "^4.1.2",
+    "bpk-component-text": "^8.1.2",
+    "date-fns": "^2.30.0",
+    "typescript": "^5.6.3"
+  }
+}
